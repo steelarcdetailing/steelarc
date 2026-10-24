@@ -1,0 +1,185 @@
+<section
+    class="projects-section section-padding"
+    id="projects">
+
+    <div class="container">
+
+        <!-- =========================
+             SECTION TITLE
+        ========================== -->
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                {{data?.title}}
+
+            </span>
+
+            <h2 class="section-title">
+
+                {{data?.heading}}
+
+            </h2>
+
+            <p class="section-description">
+
+                {{data.description}}
+
+            </p>
+
+        </div>
+
+        <!-- =========================
+             PROJECT TABS
+        ========================== -->
+
+        <div class="project-tabs">
+
+            @for(project of projects; track project.id; let i = $index){
+
+                <button
+
+                    class="project-tab"
+
+                    [class.active]="selectedProject === i"
+
+                    (click)="select(i)">
+
+                    {{ project.shortTitle }}
+
+                </button>
+
+            }
+
+        </div>
+
+        <!-- =========================
+             CONTENT
+        ========================== -->
+
+        <div class="project-content">
+
+            <div class="row align-items-center g-5">
+
+                <!-- LEFT -->
+
+                <div class="col-lg-6">
+
+                    <div class="project-text">
+
+                        <span class="project-number">
+
+                            0{{ selectedProject + 1 }}
+
+                        </span>
+
+                        <h3>
+
+                            {{ projects[selectedProject].title }}
+
+                        </h3>
+
+                        <p>
+
+                            {{ projects[selectedProject].description }}
+
+                        </p>
+
+                        <!-- Info Cards -->
+
+                        <!-- <div class="project-info">
+
+                            <div class="info-card">
+
+                                <small>Location</small>
+
+                                <strong>
+
+                                    {{ projects[selectedProject].location }}
+
+                                </strong>
+
+                            </div>
+
+                            <div class="info-card">
+
+                                <small>Client</small>
+
+                                <strong>
+
+                                    {{ projects[selectedProject].client }}
+
+                                </strong>
+
+                            </div>
+
+                            <div class="info-card">
+
+                                <small>Project Area</small>
+
+                                <strong>
+
+                                    {{ projects[selectedProject].area }}
+
+                                </strong>
+
+                            </div>
+
+                        </div> -->
+
+                        <!-- Highlights -->
+
+                        <ul class="project-highlights">
+
+                            @for(item of projects[selectedProject].highlights; track item){
+
+                                <li>
+
+                                    <i class="bi bi-check-circle-fill"></i>
+
+                                    {{ item }}
+
+                                </li>
+
+                            }
+
+                        </ul>
+
+                        <!-- <button class="primary-btn">
+
+                            View Project
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+
+                        </button> -->
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="col-lg-6">
+
+                    <div class="project-image">
+
+                        <img
+
+                            class="img-fluid rounded-4"
+
+                            [src]="projects[selectedProject].image"
+
+                            [alt]="projects[selectedProject].title">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

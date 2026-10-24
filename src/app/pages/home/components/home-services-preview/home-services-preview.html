@@ -1,0 +1,141 @@
+<section
+    class="services-section section-padding"
+    id="services">
+
+    <div class="container">
+
+        <!-- ===========================
+             SECTION TITLE
+        ============================ -->
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                {{data?.title}}
+
+            </span>
+
+            <h2 class="section-title">
+
+                {{data?.heading}}
+
+            </h2>
+
+            <p class="section-description">
+
+                {{data?.description}}
+
+            </p>
+
+        </div>
+
+        <!-- ===========================
+             SERVICE BUTTONS
+        ============================ -->
+
+        <div class="service-tabs">
+
+            @for(service of services; track service.id; let i = $index){
+
+                <button
+
+                    class="service-tab"
+
+                    [class.active]="selectedService === i"
+
+                    (click)="select(i)">
+
+                    {{ service.shortTitle }}
+
+                </button>
+
+            }
+
+        </div>
+
+        <!-- ===========================
+             CONTENT
+        ============================ -->
+
+        <div class="service-content">
+
+            <div class="row align-items-center g-5">
+
+                <!-- Left -->
+
+                <div class="col-lg-6">
+
+                    <div class="service-text">
+
+                        <span class="service-number">
+
+                            0{{ selectedService + 1 }}
+
+                        </span>
+
+                        <h3>
+
+                            {{ services[selectedService]?.title }}
+
+                        </h3>
+
+                        <p>
+
+                            {{ services[selectedService]?.description }}
+
+                        </p>
+
+                        <ul>
+
+                            @for(point of services[selectedService]?.points; track point){
+
+                                <li>
+
+                                    <i class="bi bi-check-circle-fill"></i>
+
+                                    {{ point }}
+
+                                </li>
+
+                            }
+
+                        </ul>
+
+                        <!-- <button class="primary-btn">
+
+                            Learn More
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+
+                        </button> -->
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="col-lg-6">
+
+                    <div class="service-image">
+
+                        <img
+
+                            [src]="services[selectedService]?.image"
+
+                            [alt]="services[selectedService]?.title"
+
+                            class="img-fluid rounded-4">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

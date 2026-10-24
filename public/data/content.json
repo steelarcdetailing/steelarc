@@ -1,0 +1,293 @@
+{
+    "hero": {
+        "slides": [
+            {
+                "image": "images/hero/services_steel_detailing.jpg",
+                "subtitle": "STRUCTURAL STEEL DETAILING",
+                "title": "Precision Steel Detailing Solutions",
+                "description": "Accurate shop drawings, erection drawings and BIM models delivered on time for fabricators and contractors worldwide.",
+                "buttonText": "View Services",
+                "buttonId": "services"
+            },
+            {
+                "image": "images/hero/services_bim.jpg",
+                "subtitle": "BIM MODELLING",
+                "title": "Intelligent 3D Steel Modelling",
+                "description": "High-quality BIM models that improve coordination, reduce clashes and accelerate project delivery.",
+                "buttonText": "View Services",
+                "buttonId": "services"
+            },
+            {
+                "image": "images/hero/projects_industries.jpg",
+                "subtitle": "INDUSTRIAL PROJECTS",
+                "title": "Precision Detailing for Industrial Facilities",
+                "description": "Complete structural steel detailing for industrial facilities, including fabrication drawings, GA drawings, erection drawings and connection detailing.",
+                "buttonText": "View Projects",
+                "buttonId": "projects"
+            },
+            {
+                "image": "images/hero/projects_commercial.jpg",
+                "subtitle": "COMMERCIAL PROJECTS",
+                "title": "Accurate Detailing for Commercial Buildings",
+                "description": "Delivering coordinated BIM models and structural steel detailing packages for multi-storey commercial buildings with fabrication-ready documentation.",
+                "buttonText": "View Projects",
+                "buttonId": "projects"
+            }
+        ]
+    },
+    "about": {
+        "title": "About Steelarc",
+        "heading": "Delivering Precision in Structural Steel Detailing",
+        "description": "Steelarc is a trusted structural steel detailing company delivering high-quality shop drawings, erection drawings, connection detailing and BIM modelling services to clients worldwide. We combine engineering expertise, advanced technology and strict quality standards to provide fabrication-ready drawings that reduce errors, save time and improve project execution.",
+        "features": [
+            {
+                "icon": "bi bi-building",
+                "title": "Steel Detailing",
+                "description": "Accurate fabrication and erection drawings following international standards."
+            },
+            {
+                "icon": "bi bi-boxes",
+                "title": "BIM Modelling",
+                "description": "3D structural steel models for clash-free project coordination."
+            },
+            {
+                "icon": "bi bi-award",
+                "title": "Quality Delivery",
+                "description": "Committed to quality, precision and on-time project delivery."
+            }
+        ]
+    },
+    "service": {
+        "title": "OUR SERVICES",
+        "heading": "Comprehensive Structural Steel Detailing Services",
+        "description": "We deliver accurate, fabrication-ready structural steel detailing solutions that improve productivity, reduce errors and accelerate project completion.",
+        "services": [
+            {
+                "id": 0,
+                "shortTitle": "Steel Detailing",
+                "title": "Structural Steel Detailing",
+                "image": "images/services/services_steel_detailing.jpg",
+                "description": "We provide highly accurate structural steel detailing services using Tekla Structures and industry standards to produce fabrication-ready drawings.",
+                "points": [
+                    "Fabrication Drawings",
+                    "Anchor Bolt Plans",
+                    "General Arrangement Drawings",
+                    "Assembly Drawings"
+                ]
+            },
+            {
+                "id": 1,
+                "shortTitle": "Connection",
+                "title": "Steel Connection Detailing",
+                "image": "images/services/services_connection.jpg",
+                "description": "Detailed connection drawings ensuring safe fabrication and erection while reducing rework at site.",
+                "points": [
+                    "Moment Connections",
+                    "Shear Connections",
+                    "Base Plate Details"
+                ]
+            },
+            {
+                "id": 2,
+                "shortTitle": "BIM",
+                "title": "BIM & 3D Modelling",
+                "image": "images/services/services_bim.jpg",
+                "description": "Accurate BIM models for clash detection, coordination and improved construction workflow.",
+                "points": [
+                    "Clash Detection",
+                    "Coordination Models",
+                    "IFC Deliverables"
+                ]
+            },
+            {
+                "id": 3,
+                "shortTitle": "Shop Drawings",
+                "title": "Shop Drawings",
+                "image": "images/services/services_shop_drawings.jpg",
+                "description": "Detailed shop drawings prepared for steel fabricators with complete dimensions and welding information.",
+                "points": [
+                    "Assembly Drawings",
+                    "Single Part Drawings",
+                    "Bolt Lists",
+                    "Material Lists"
+                ]
+            },
+            {
+                "id": 4,
+                "shortTitle": "Erection",
+                "title": "Erection Drawings",
+                "image": "images/services/services_erection.jpg",
+                "description": "Professional erection drawings for safe and efficient on-site installation of structural steel.",
+                "points": [
+                    "Sequence Drawings",
+                    "GA Plans",
+                    "Erection Marks",
+                    "Field Bolt Details"
+                ]
+            }
+        ]
+    },
+    "project": {
+        "title": "OUR PROJECTS",
+        "heading": "Engineering Projects We've Delivered",
+        "description": "From industrial facilities to commercial buildings, we deliver accurate structural steel detailing solutions that help clients complete projects faster and with confidence",
+        "projects": [
+            {
+                "id": 0,
+                "shortTitle": "Industrial",
+                "title": "Industrial Manufacturing Facility",
+                "image": "images/projects/projects_industries.jpg",
+                "location": "Texas, USA",
+                "client": "Global Steel Fabricator",
+                "area": "85,000 sq.ft",
+                "description": "Complete structural steel detailing including fabrication drawings, GA drawings and erection drawings for a large industrial manufacturing facility.",
+                "highlights": [
+                    "Tekla Structures",
+                    "Shop Drawings",
+                    "Erection Drawings",
+                    "Connection Detailing"
+                ]
+            },
+            {
+                "id": 1,
+                "shortTitle": "Commercial",
+                "title": "Commercial Office Building",
+                "image": "images/projects/projects_commercial.jpg",
+                "location": "Dubai, UAE",
+                "client": "Leading Contractor",
+                "area": "120,000 sq.ft",
+                "description": "Delivered accurate BIM models and steel detailing package for a multi-storey commercial office project.",
+                "highlights": [
+                    "BIM Coordination",
+                    "LOD 400",
+                    "Steel Detailing",
+                    "IFC Models"
+                ]
+            },
+            {
+                "id": 2,
+                "shortTitle": "Warehouse",
+                "title": "Warehouse & Logistics Hub",
+                "image": "images/projects/projects_warehouse.jpg",
+                "location": "Germany",
+                "client": "Logistics Company",
+                "area": "160,000 sq.ft",
+                "description": "Prepared fabrication-ready detailing package with fast turnaround for a high-capacity logistics warehouse.",
+                "highlights": [
+                    "GA Drawings",
+                    "Anchor Bolt Plans",
+                    "Assembly Drawings",
+                    "Material Reports"
+                ]
+            },
+            {
+                "id": 3,
+                "shortTitle": "Infrastructure",
+                "title": "Transportation Infrastructure",
+                "image": "images/projects/projects_infrastructures.jpg",
+                "location": "Singapore",
+                "client": "Infrastructure Contractor",
+                "area": "95,000 sq.ft",
+                "description": "Steel detailing support for transport infrastructure with coordinated BIM models and erection documentation.",
+                "highlights": [
+                    "Bridge Components",
+                    "Steel Frames",
+                    "BIM Models",
+                    "Site Coordination"
+                ]
+            }
+        ]
+    },
+    "softwareSection": {
+        "title": "SOFTWARE & TECHNOLOGY",
+        "heading": "Powered by Industry-Leading Software",
+        "description": "We work with leading structural steel detailing and BIM platforms to deliver accurate, fabrication-ready models and drawings for projects worldwide.",
+        "buttonText": "View Our Capabilities",
+        "softwares": [
+            {
+                "name": "Tekla Structures",
+                "logo": "images/software/tekla.png"
+            },
+            {
+                "name": "SDS2",
+                "logo": "images/software/sds2.png"
+            },
+            {
+                "name": "International Code Council",
+                "logo": "images/software/international-code-council.png"
+            },
+            {
+                "name": "American Welding Society",
+                "logo": "images/software/american-welding-society.png"
+            },
+            {
+                "name": "Steel Erectors Association Of America",
+                "logo": "images/software/steel-erectors-association-of-america.png"
+            },
+            {
+                "name": "Osha",
+                "logo": "images/software/osha.png"
+            },
+            {
+                "name": "Aisc",
+                "logo": "images/software/aisc.png"
+            },
+            {
+                "name": "Aisi",
+                "logo": "images/software/aisi.png"
+            }
+        ]
+    },
+    "contact": {
+        "title": "CONTACT US",
+        "heading": "Let's Discuss Your Next Project",
+        "description": "Whether you need Structural Steel Detailing, BIM Modelling, Shop Drawings or Connection Detailing, our engineering team is ready to support your project.",
+        "contactInfo": {
+            "title": "Get In Touch",
+            "description": "We'd love to understand your project requirements. Share your project details and our engineering team will get back to you as soon as possible.",
+            "phone": "+91 98765 43210",
+            "email": "info@stellarcdetailing.com",
+            "location": "Chennai, Tamil Nadu, India",
+            "workingHours": "Mon - Sat | 9:00 AM - 6:00 PM",
+            "linkedIn": "https://www.linkedin.com",
+            "facebook": "https://www.facebook.com",
+            "instagram": "https://www.instagram.com",
+            "twitter": "https://www.x.com"
+        }
+    },
+    "footer": {
+        "description": "Steelarc delivers high-quality Structural Steel Detailing, BIM Modelling, Shop Drawings and Connection Detailing services for fabricators, contractors and consultants worldwide.",
+        "linkedIn": "https://www.linkedin.com",
+        "facebook": "https://www.facebook.com",
+        "instagram": "https://www.instagram.com",
+        "twitter": "https://www.x.com",
+        "quickLinks": [
+            {
+                "displayName": "Home",
+                "link": "home"
+            },
+            {
+                "displayName": "About",
+                "link": "about"
+            },
+            {
+                "displayName": "Services",
+                "link": "services"
+            },
+            {
+                "displayName": "Projects",
+                "link": "projects"
+            },
+            {
+                "displayName": "Contact",
+                "link": "contact"
+            }
+        ],
+        "contact": {
+            "location": "Chennai, Tamil Nadu, India",
+            "email": "info@stellarcdetailing.com",
+            "phone": "+91 98765 43210",
+            "workingHours": "Mon - Sat | 9:00 AM - 6:00 PM"
+        }
+    }
+}

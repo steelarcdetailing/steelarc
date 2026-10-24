@@ -1,0 +1,85 @@
+<section class="software-section">
+
+    <div class="container">
+
+        <!-- Section Header -->
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                {{section?.title}}
+
+            </span>
+
+            <h2 class="section-title">
+
+                {{section?.heading}}
+
+            </h2>
+
+            <p class="section-description">
+
+                {{section.description}}
+
+            </p>
+
+        </div>
+
+
+        <!-- Software Carousel -->
+
+        <div class="software-carousel">
+
+            <!-- Left Arrow -->
+
+            <button
+                class="carousel-arrow carousel-arrow-left"
+                type="button"
+                (click)="scrollLeft()"
+                aria-label="Previous software">
+
+                <i class="bi bi-chevron-left"></i>
+
+            </button>
+
+
+            <!-- Cards -->
+
+            <div
+                #softwareTrack
+                class="software-track">
+
+                @for (software of softwares; track software.name) {
+
+                    <div class="software-card">
+
+                        <img
+                            [src]="software.logo"
+                            [alt]="software.name"
+                            loading="lazy">
+
+                    </div>
+
+                }
+
+            </div>
+
+
+            <!-- Right Arrow -->
+
+            <button
+                class="carousel-arrow carousel-arrow-right"
+                type="button"
+                (click)="scrollRight()"
+                aria-label="Next software">
+
+                <i class="bi bi-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,501 @@
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 997;
+
+    transition: .35s ease;
+
+    padding: 18px 0;
+
+    background: #FFFFFF;
+
+}
+
+.header.scrolled {
+
+    background: #FFFFFF;
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.18);
+
+    padding: 18px 0;
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar-custom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.lg-logo {
+    display: block;
+    width: 260px;
+    height: 70px;
+    // background-image: url("images/logo.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    cursor:pointer;
+
+}
+
+.logo img{
+
+    height:56px;
+
+    width:auto;
+
+    transition:.3s;
+
+}
+
+.header.scrolled .newLogo{
+
+    height:48px;
+
+}
+
+/* ==========================================================
+   DESKTOP MENU
+========================================================== */
+
+.desktop-menu{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.desktop-menu li{
+
+    margin:0;
+
+}
+
+.desktop-menu button{
+
+    border:none;
+
+    background:none;
+
+    color:black;
+
+    font-weight:600;
+
+    font-size:18px;
+
+    padding:12px 18px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.desktop-menu button::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:4px;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:var(--accent);
+
+    transition:.35s;
+
+}
+
+.desktop-menu button:hover{
+
+    color:blaCK;
+
+}
+
+.desktop-menu button:hover::after{
+
+    width:70%;
+
+}
+
+/* ==========================================================
+   RIGHT SECTION
+========================================================== */
+
+.right-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.quote-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#fff;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(0,87,217,.25);
+
+}
+
+.quote-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(0,87,217,.35);
+
+}
+
+/* ==========================================================
+   HAMBURGER
+========================================================== */
+
+.hamburger{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    width:42px;
+
+    height:42px;
+
+    position:relative;
+
+}
+
+.hamburger span{
+
+    position:absolute;
+
+    left:8px;
+
+    width:26px;
+
+    height:2px;
+
+    background:black;
+
+}
+
+.hamburger span:nth-child(1){
+
+    top:12px;
+
+}
+
+.hamburger span:nth-child(2){
+
+    top:20px;
+
+}
+
+.hamburger span:nth-child(3){
+
+    top:28px;
+
+}
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.mobile-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:998;
+
+}
+
+.mobile-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================================
+   MOBILE MENU
+========================================================== */
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-340px;
+
+    width:320px;
+
+    max-width:90%;
+
+    height:100vh;
+
+    background:#fff;
+
+    z-index:999;
+
+    transition:.4s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.mobile-menu.open{
+
+    right:0;
+
+}
+
+.mobile-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.mobile-header img{
+
+    height:42px;
+
+}
+
+.close-btn{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f1f5f9;
+
+    cursor:pointer;
+
+}
+
+.mobile-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:20px 0;
+
+}
+
+.mobile-links button{
+
+    border:none;
+
+    background:none;
+
+    text-align:left;
+
+    padding:18px 28px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    color:var(--heading);
+
+    transition:.3s;
+
+}
+
+.mobile-links button:hover{
+
+    background:#eef5ff;
+
+    color:var(--primary);
+
+    padding-left:40px;
+
+}
+
+.mobile-bottom{
+
+    margin-top:auto;
+
+    padding:24px;
+
+}
+
+.mobile-bottom .quote-btn{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1201px){
+
+    .desktop-menu{
+
+        display:none;
+
+    }
+
+    .right-section .quote-btn{
+
+        display:none;
+
+    }
+
+    .hamburger{
+
+        display:block;
+
+    }
+
+}
+
+@media(min-width:1200px){
+
+    .mobile-menu,
+
+    .mobile-overlay{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .logo img{
+
+        height:46px;
+
+    }
+
+    .header{
+
+        padding:14px 0;
+
+    }
+
+}

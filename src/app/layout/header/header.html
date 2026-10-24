@@ -1,0 +1,150 @@
+<header class="header" [class.scrolled]="isScrolled()">
+
+    <div class="container">
+
+        <nav class="navbar-custom">
+
+            <!-- ==========================
+                 Logo
+            =========================== -->
+
+            <a class="lg-logo" (click)="scrollTo('home')" [style.background-image]="'url(images/logo.jpeg)'">
+                
+
+                <!-- Replace with your logo -->
+                <!-- <img src="images/logo.jpeg" alt="Steelarc"> -->
+
+                <!--
+                OR
+
+                <span>Steelarc</span>
+
+                -->
+
+            </a>
+
+
+
+            <!-- ==========================
+                 Desktop Menu
+            =========================== -->
+
+            <ul class="desktop-menu">
+
+                @for(menu of menus; track menu.target){
+
+                <li>
+
+                    <button type="button" (click)="scrollTo(menu.target)">
+
+                        {{menu.label}}
+
+                    </button>
+
+                </li>
+
+                }
+
+            </ul>
+
+
+
+            <!-- ==========================
+                 Right Side
+            =========================== -->
+
+            <div class="right-section">
+
+                <button class="quote-btn" (click)="scrollTo('contact')">
+
+                    Get Quote
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+
+
+                <!-- ==========================
+                     Hamburger
+                =========================== -->
+
+                <button class="hamburger" (click)="toggleMenu()" aria-label="Menu">
+
+                    <span></span>
+
+                    <span></span>
+
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================================
+     Mobile Overlay
+========================================== -->
+
+<div class="mobile-overlay" [class.show]="isMenuOpen()" (click)="closeMenu()">
+
+</div>
+
+
+
+<!-- ==========================================
+     Mobile Menu
+========================================== -->
+
+<div class="mobile-menu" [class.open]="isMenuOpen()">
+
+
+    <div class="mobile-header">
+
+            <a class="lg-logo" (click)="scrollTo('home')" [style.background-image]="'url(images/logo.jpeg)'"></a>
+
+
+        <button class="close-btn" (click)="closeMenu()">
+
+            <i class="bi bi-x-lg"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <div class="mobile-links">
+
+        @for(menu of menus; track menu.target){
+
+        <button (click)="scrollTo(menu.target)">
+
+            {{menu.label}}
+
+        </button>
+
+        }
+
+    </div>
+
+
+
+    <div class="mobile-bottom">
+
+        <button class="quote-btn" (click)="scrollTo('contact')">
+
+            Request Quote
+
+        </button>
+
+    </div>
+
+</div>

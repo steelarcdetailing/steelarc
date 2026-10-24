@@ -1,0 +1,341 @@
+<section
+    class="contact-section"
+    id="contact">
+
+    <div class="container">
+
+        <!-- ===========================
+             Section Heading
+        ============================ -->
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                {{data?.title}}
+
+            </span>
+
+            <h2 class="section-title">
+
+                {{data?.heading}}
+
+            </h2>
+
+            <p class="section-description">
+
+                {{data?.description}}
+
+            </p>
+
+        </div>
+
+        <div class="row g-5 align-items-stretch">
+
+            <!-- ==========================================
+                 LEFT SIDE
+            =========================================== -->
+
+            <div class="col-lg-5">
+
+                <div class="contact-info">
+
+                    <h3>
+
+                        {{contactInfo?.title}}
+
+                    </h3>
+
+                    <p>
+
+                        {{contactInfo?.description}}
+
+                    </p>
+
+                    <!-- Phone -->
+
+                    <div class="info-card">
+
+                        <div class="icon">
+
+                            <i class="bi bi-telephone-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>Phone</small>
+
+                            <h6>{{contactInfo?.phone}}</h6>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="info-card">
+
+                        <div class="icon">
+
+                            <i class="bi bi-envelope-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>Email</small>
+
+                            <h6>{{contactInfo?.email}}</h6>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Office -->
+
+                    <div class="info-card">
+
+                        <div class="icon">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>Office</small>
+
+                            <h6>{{contactInfo?.location}}</h6>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Hours -->
+
+                    <div class="info-card">
+
+                        <div class="icon">
+
+                            <i class="bi bi-clock-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>Working Hours</small>
+
+                            <h6>{{contactInfo?.workingHours}}</h6>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Social -->
+
+                    <div class="social-links">
+
+                        <a href="#">
+
+                            <i class="bi bi-linkedin"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="bi bi-facebook"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="bi bi-instagram"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="bi bi-twitter-x"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ==========================================
+                 FORM
+            =========================================== -->
+
+            <div class="col-lg-7">
+
+                <div class="contact-form">
+
+                    <form
+                        #ctaForm="ngForm"
+                        (ngSubmit)="submit()">
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <input
+
+                                    class="form-control"
+
+                                    type="text"
+
+                                    name="name"
+
+                                    [(ngModel)]="contactForm.name"
+
+                                    placeholder="Full Name"
+
+                                    required>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <input
+
+                                    class="form-control"
+
+                                    type="text"
+
+                                    name="company"
+
+                                    [(ngModel)]="contactForm.company"
+
+                                    placeholder="Company Name">
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <input
+
+                                    class="form-control"
+
+                                    type="email"
+
+                                    name="email"
+
+                                    [(ngModel)]="contactForm.email"
+
+                                    placeholder="Email Address"
+
+                                    required>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <input
+
+                                    class="form-control"
+
+                                    type="text"
+
+                                    name="phone"
+
+                                    [(ngModel)]="contactForm.phone"
+
+                                    placeholder="Phone Number">
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <input
+
+                                    class="form-control"
+
+                                    type="text"
+
+                                    name="country"
+
+                                    [(ngModel)]="contactForm.country"
+
+                                    placeholder="Country">
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <select
+
+                                    class="form-select"
+
+                                    name="service"
+
+                                    [(ngModel)]="contactForm.service">
+
+                                    <option value="">
+
+                                        Select Service
+
+                                    </option>
+
+                                    @for(service of servicesList; track service){
+
+                                        <option [value]="service">
+
+                                            {{ service }}
+
+                                        </option>
+
+                                    }
+
+                                </select>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <textarea
+
+                                    class="form-control"
+
+                                    rows="6"
+
+                                    name="message"
+
+                                    [(ngModel)]="contactForm.message"
+
+                                    placeholder="Tell us about your project...">
+
+                                </textarea>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <button
+                                    class="submit-btn"
+                                    type="submit">
+
+                                    Request Proposal
+
+                                    <i class="bi bi-arrow-right ms-2"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

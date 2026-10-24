@@ -1,0 +1,92 @@
+<section class="hero-section" id="home">
+
+    <!-- Background Images -->
+
+    @for (slide of heroSlides; track slide.title; let i = $index) {
+
+    <div class="hero-slide" [class.active]="i === currentIndex" [style.background-image]="'url(' + slide.image + ')'">
+
+        <div class="hero-overlay"></div>
+
+    </div>
+
+    }
+
+    <!-- Hero Content -->
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-subtitle">
+
+                {{ heroSlides[currentIndex]?.subtitle }}
+
+            </span>
+
+            <h1>
+
+                {{ heroSlides[currentIndex]?.title }}
+
+            </h1>
+
+            <p>
+
+                {{ heroSlides[currentIndex]?.description }}
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" (click)="goToSection(heroSlides[currentIndex]?.buttonId)">
+
+                    {{ heroSlides[currentIndex]?.buttonText }}
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Previous -->
+
+    <button class="hero-arrow left" (click)="previous()">
+
+        <i class="bi bi-chevron-left"></i>
+
+    </button>
+
+    <!-- Next -->
+
+    <button class="hero-arrow right" (click)="next()">
+
+        <i class="bi bi-chevron-right"></i>
+
+    </button>
+
+    <!-- Indicators -->
+
+    <div class="hero-indicators">
+
+        @for (slide of heroSlides; track slide.image; let i = $index) {
+
+        <button class="dot" [class.active]="i === currentIndex" (click)="goTo(i)">
+        </button>
+
+        }
+
+    </div>
+
+    <!-- Scroll Indicator -->
+
+    <div class="scroll-down">
+
+        <span></span>
+
+        <small>SCROLL</small>
+
+    </div>
+
+</section>

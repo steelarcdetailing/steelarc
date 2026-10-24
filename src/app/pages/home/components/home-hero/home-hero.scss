@@ -1,0 +1,485 @@
+/*==============================================================
+ HERO SECTION
+==============================================================*/
+
+.hero-section {
+
+    position: relative;
+
+    height: 100vh;
+
+    min-height: 760px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    color: #fff;
+
+}
+
+/*==============================================================
+ BACKGROUND SLIDES
+==============================================================*/
+
+.hero-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    opacity: 0;
+
+    transform: scale(1.08);
+
+    transition:
+        opacity .9s ease,
+        transform 6s linear;
+
+    z-index: 0;
+
+}
+
+.hero-slide.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    z-index: 1;
+
+}
+
+/*==============================================================
+ OVERLAY
+==============================================================*/
+
+// .hero-overlay {
+
+//     position: absolute;
+//     inset: 0;
+
+//     background:
+//         linear-gradient(
+//             90deg,
+//             rgba(24,24,27,.92) 0%,
+//             rgba(38,34,30,.78) 45%,
+//             rgba(24,24,27,.48) 100%
+//         );
+
+// }
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(24, 24, 27, .88) 0%,
+            rgba(24, 24, 27, .72) 45%,
+            rgba(24, 24, 27, .45) 100%
+        );
+
+}
+
+/*==============================================================
+ CONTENT
+==============================================================*/
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 760px;
+
+    animation: fadeUp .8s ease;
+
+}
+
+.hero-subtitle {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.12);
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    backdrop-filter: blur(10px);
+
+    letter-spacing: 2px;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+}
+
+.hero-content h1 {
+
+    font-size: clamp(2.8rem,5vw,4.8rem);
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    margin-bottom: 24px;
+
+}
+
+.hero-content p {
+
+    font-size: 1.15rem;
+
+    color: rgba(255,255,255,.88);
+
+    line-height: 1.8;
+
+    max-width: 650px;
+
+    margin-bottom: 40px;
+
+}
+
+/*==============================================================
+ BUTTONS
+==============================================================*/
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+.primary-btn,
+.secondary-btn {
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    padding: 16px 34px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+}
+
+.primary-btn {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    box-shadow: 0 15px 35px rgba(0,87,217,.35);
+
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-4px);
+
+}
+
+.secondary-btn {
+
+    background: rgba(255,255,255,.12);
+
+    color: #fff;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    backdrop-filter: blur(12px);
+
+}
+
+.secondary-btn:hover {
+
+    background: #fff;
+
+    color: var(--primary);
+
+}
+
+/*==============================================================
+ ARROWS
+==============================================================*/
+
+.hero-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 56px;
+
+    height: 56px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.14);
+
+    backdrop-filter: blur(12px);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    z-index: 20;
+
+}
+
+.hero-arrow:hover {
+
+    background: var(--primary);
+
+}
+
+.hero-arrow.left {
+
+    left: 35px;
+
+}
+
+.hero-arrow.right {
+
+    right: 35px;
+
+}
+
+/*==============================================================
+ DOTS
+==============================================================*/
+
+.hero-indicators {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 12px;
+
+    z-index: 20;
+
+}
+
+.dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    background: rgba(255,255,255,.35);
+
+    transition: .3s;
+
+}
+
+.dot.active {
+
+    width: 34px;
+
+    border-radius: 30px;
+
+    background: var(--accent);
+
+}
+
+/*==============================================================
+ SCROLL INDICATOR
+==============================================================*/
+
+.scroll-down {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    right: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    z-index: 10;
+
+}
+
+.scroll-down span {
+
+    width: 2px;
+
+    height: 45px;
+
+    background: white;
+
+    animation: scrollLine 1.5s infinite;
+
+}
+
+.scroll-down small {
+
+    margin-top: 10px;
+
+    letter-spacing: 3px;
+
+    font-size: .75rem;
+
+}
+
+/*==============================================================
+ ANIMATION
+==============================================================*/
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes scrollLine {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(-12px);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform: translateY(12px);
+
+    }
+
+}
+
+/*==============================================================
+ RESPONSIVE
+==============================================================*/
+
+@media (max-width:991px) {
+
+    .hero-section {
+
+        min-height: 680px;
+
+        text-align: center;
+
+    }
+
+    .hero-content {
+
+        margin: auto;
+
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+    .hero-arrow {
+
+        display: none;
+
+    }
+
+    .scroll-down {
+
+        display: none;
+
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .hero-content h1 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+
+    }
+
+    .primary-btn,
+    .secondary-btn {
+
+        width: 100%;
+
+    }
+
+}

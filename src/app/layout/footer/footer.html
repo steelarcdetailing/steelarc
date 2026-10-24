@@ -1,0 +1,130 @@
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <!-- ==========================
+                 COMPANY
+            =========================== -->
+
+            <div class="col-lg-5">
+
+                   <a class="lg-logo mobile-footer-img" (click)="scrollTo('home')" [style.background-image]="'url(images/logo.jpeg)'"></a>
+
+                <p class="footer-about">
+
+                    {{data?.description}}
+
+                </p>
+
+                <div class="social-links">
+
+                    <a [href]="data?.linkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a [href]="data?.facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a [href]="data?.instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a [href]="data?.twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                 QUICK LINKS
+            =========================== -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <h5>Quick Links</h5>
+
+                <ul>
+
+                    @for(link of quickLinks; track link){
+
+                        <li>
+
+                            <a class="cursor" (click)="scrollTo(link.link)">
+
+                                {{ link.displayName }}
+
+                            </a>
+
+                        </li>
+
+                    }
+
+                </ul>
+
+            </div>
+
+            <!-- ==========================
+                 CONTACT
+            =========================== -->
+
+            <div class="col-lg-4">
+
+                <h5>Contact</h5>
+
+                <ul class="contact-list">
+
+                    <li>
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        {{contact?.location}}
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        {{contact?.email}}
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        {{contact.phone}}
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-clock-fill"></i>
+
+                        {{contact.workingHours}}
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © {{ year }} Steelarc. All Rights Reserved.
+
+            </span>
+
+            <div>
+
+                <a href="#">Privacy Policy</a>
+
+                <a href="#">Terms & Conditions</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

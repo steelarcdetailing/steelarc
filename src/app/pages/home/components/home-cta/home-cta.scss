@@ -1,0 +1,360 @@
+/*=========================================================
+  CONTACT SECTION
+=========================================================*/
+
+.contact-section {
+
+    padding: 100px 0;
+
+    background: linear-gradient(180deg, #F7F7F7 0%, #ffffff 100%);
+
+}
+
+/*=========================================================
+  SECTION TITLE
+=========================================================*/
+
+.section-tag {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(245,124,0,.08);
+
+    color: var(--primary);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+    
+    border: solid 1px;
+
+}
+
+.section-title {
+
+    font-size: clamp(2rem,4vw,3rem);
+
+    font-weight: 800;
+
+    color: var(--heading);
+
+    margin-bottom: 18px;
+
+}
+
+.section-description {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    color: var(--text);
+
+    line-height: 1.8;
+
+}
+
+/*=========================================================
+  LEFT PANEL
+=========================================================*/
+
+.contact-info {
+
+    height: 100%;
+
+    background: linear-gradient(135deg,var(--secondary),var(--secondary-light));
+
+    color: white;
+
+    border-radius: 28px;
+
+    padding: 45px;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.contact-info h3 {
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+}
+
+.contact-info>p {
+
+    color: rgba(255,255,255,.85);
+
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+
+}
+
+/*=========================================================
+  INFO CARD
+=========================================================*/
+
+.info-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(10px);
+
+}
+
+.icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,.15);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.3rem;
+
+}
+
+.info-card small {
+
+    color: rgba(255,255,255,.7);
+
+    display: block;
+
+    margin-bottom: 4px;
+
+}
+
+.info-card h6 {
+
+    margin: 0;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+}
+
+/*=========================================================
+  SOCIAL
+=========================================================*/
+
+.social-links {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+.social-links a {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.12);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition: .35s;
+
+}
+
+.social-links a:hover {
+
+    background: white;
+
+    color: var(--primary);
+
+    transform: translateY(-4px);
+
+}
+
+/*=========================================================
+  FORM
+=========================================================*/
+
+.contact-form {
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 45px;
+
+    box-shadow: 0 20px 55px rgba(0,0,0,.08);
+
+    height: 100%;
+
+}
+
+/*=========================================================
+  INPUTS
+=========================================================*/
+
+.form-control,
+.form-select {
+
+    height: 58px;
+
+    border-radius: 14px;
+
+    border: 1px solid #dbe5ef;
+
+    padding: 14px 18px;
+
+    transition: .3s;
+
+    box-shadow: none;
+
+}
+
+textarea.form-control {
+
+    min-height: 160px;
+
+    resize: vertical;
+
+    padding-top: 16px;
+
+}
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 .2rem rgba(0,87,217,.15);
+
+}
+
+/*=========================================================
+  BUTTON
+=========================================================*/
+
+.submit-btn {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 18px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary), var(--primary-dark)
+    );
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    transition: .35s;
+
+    box-shadow: 0 18px 40px rgba(0,87,217,.28);
+
+}
+
+.submit-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 24px 50px rgba(0,87,217,.35);
+
+}
+
+/*=========================================================
+  RESPONSIVE
+=========================================================*/
+
+@media (max-width:991px){
+
+    .contact-section{
+
+        padding:80px 0;
+
+    }
+
+    .contact-info{
+
+        padding:35px;
+
+    }
+
+    .contact-form{
+
+        padding:35px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .contact-info{
+
+        padding:25px;
+
+    }
+
+    .contact-form{
+
+        padding:25px;
+
+    }
+
+    .social-links{
+
+        justify-content:center;
+
+    }
+
+}
