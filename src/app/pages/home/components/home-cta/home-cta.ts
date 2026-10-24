@@ -84,6 +84,7 @@ export class HomeCta implements OnInit {
             'Unable to send your enquiry. Please try again later.';
 
           this.isSubmitting = false;
+          alert(this.submitError);
         }
       });
   }

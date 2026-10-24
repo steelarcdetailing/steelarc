@@ -1,6 +1,4 @@
-<section
-    class="contact-section"
-    id="contact">
+<section class="contact-section" id="contact">
 
     <div class="container">
 
@@ -174,105 +172,48 @@
 
                 <div class="contact-form">
 
-                    <form
-                        #ctaForm="ngForm"
-                        (ngSubmit)="submit()">
+                    <form #ctaForm="ngForm" (ngSubmit)="submit()">
 
                         <div class="row g-4">
 
                             <div class="col-md-6">
 
-                                <input
-
-                                    class="form-control"
-
-                                    type="text"
-
-                                    name="name"
-
-                                    [(ngModel)]="contactForm.name"
-
-                                    placeholder="Full Name"
-
-                                    required>
+                                <input class="form-control" type="text" name="name" [(ngModel)]="contactForm.name"
+                                    placeholder="Full Name" required>
 
                             </div>
 
                             <div class="col-md-6">
 
-                                <input
-
-                                    class="form-control"
-
-                                    type="text"
-
-                                    name="company"
-
-                                    [(ngModel)]="contactForm.company"
-
+                                <input class="form-control" type="text" name="company" [(ngModel)]="contactForm.company"
                                     placeholder="Company Name">
 
                             </div>
 
                             <div class="col-md-6">
 
-                                <input
-
-                                    class="form-control"
-
-                                    type="email"
-
-                                    name="email"
-
-                                    [(ngModel)]="contactForm.email"
-
-                                    placeholder="Email Address"
-
-                                    required>
+                                <input class="form-control" type="email" name="email" [(ngModel)]="contactForm.email"
+                                    placeholder="Email Address" required>
 
                             </div>
 
                             <div class="col-md-6">
 
-                                <input
-
-                                    class="form-control"
-
-                                    type="text"
-
-                                    name="phone"
-
-                                    [(ngModel)]="contactForm.phone"
-
+                                <input class="form-control" type="text" name="phone" [(ngModel)]="contactForm.phone"
                                     placeholder="Phone Number">
 
                             </div>
 
                             <div class="col-md-6">
 
-                                <input
-
-                                    class="form-control"
-
-                                    type="text"
-
-                                    name="country"
-
-                                    [(ngModel)]="contactForm.country"
-
+                                <input class="form-control" type="text" name="country" [(ngModel)]="contactForm.country"
                                     placeholder="Country">
 
                             </div>
 
                             <div class="col-md-6">
 
-                                <select
-
-                                    class="form-select"
-
-                                    name="service"
-
-                                    [(ngModel)]="contactForm.service">
+                                <select class="form-select" name="service" [(ngModel)]="contactForm.service">
 
                                     <option value="">
 
@@ -282,11 +223,11 @@
 
                                     @for(service of servicesList; track service){
 
-                                        <option [value]="service">
+                                    <option [value]="service">
 
-                                            {{ service }}
+                                        {{ service }}
 
-                                        </option>
+                                    </option>
 
                                     }
 
@@ -296,16 +237,7 @@
 
                             <div class="col-12">
 
-                                <textarea
-
-                                    class="form-control"
-
-                                    rows="6"
-
-                                    name="message"
-
-                                    [(ngModel)]="contactForm.message"
-
+                                <textarea class="form-control" rows="6" name="message" [(ngModel)]="contactForm.message"
                                     placeholder="Tell us about your project...">
 
                                 </textarea>
@@ -314,11 +246,9 @@
 
                             <div class="col-12">
 
-                                <button
-                                    class="submit-btn"
-                                    type="submit">
+                                <button class="submit-btn" [disabled]="ctaForm.invalid || isSubmitting" type="submit">
 
-                                    Request Proposal
+                                    {{ isSubmitting ? 'Sending...' : 'Request Proposal' }}
 
                                     <i class="bi bi-arrow-right ms-2"></i>
 
