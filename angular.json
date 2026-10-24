@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "arc-steel": {
+    "steelarc": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "arc-steel:build:production"
+              "buildTarget": "steelarc:build:production"
             },
             "development": {
-              "buildTarget": "arc-steel:build:development"
+              "buildTarget": "steelarc:build:development"
             }
           },
           "defaultConfiguration": "development"

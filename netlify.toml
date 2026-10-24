@@ -1,7 +1,7 @@
 
 [build]
   command = "npm run build"
-  publish = "dist/arc-steel/browser"
+  publish = "dist/steelarc/browser"
 
 [functions]
   directory = "netlify/functions"
