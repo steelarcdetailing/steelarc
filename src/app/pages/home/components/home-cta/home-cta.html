@@ -132,7 +132,7 @@
 
                     <!-- Social -->
 
-                    <div class="social-links">
+                    <!-- <div class="social-links">
 
                         <a href="#">
 
@@ -158,7 +158,30 @@
 
                         </a>
 
+                    </div> -->
+
+                    <div class="social-links">
+                        <a [href]="contactInfo.linkedIn" target="_blank"
+                            rel="noopener noreferrer" aria-label="ARC Steel on LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a [href]="contactInfo.facebook" target="_blank" rel="noopener noreferrer"
+                            aria-label="ARC Steel on Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a [href]="contactInfo.instagram" target="_blank"
+                            rel="noopener noreferrer" aria-label="ARC Steel on Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a [href]="contactInfo.twitter" target="_blank" rel="noopener noreferrer"
+                            aria-label="ARC Steel on X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
                     </div>
+
 
                 </div>
 
@@ -246,7 +269,8 @@
 
                             <div class="col-12">
 
-                                <button class="submit-btn" [class.disabled]="ctaForm.invalid || isSubmitting" [disabled]="ctaForm.invalid || isSubmitting" type="submit">
+                                <button class="submit-btn" [class.disabled]="ctaForm.invalid || isSubmitting"
+                                    [disabled]="ctaForm.invalid || isSubmitting" type="submit">
 
                                     {{ isSubmitting ? 'Sending...' : 'Request Proposal' }}
 
