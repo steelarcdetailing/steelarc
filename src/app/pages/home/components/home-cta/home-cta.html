@@ -186,7 +186,7 @@
                             <div class="col-md-6">
 
                                 <input class="form-control" type="text" name="company" [(ngModel)]="contactForm.company"
-                                    placeholder="Company Name">
+                                    placeholder="Company Name" required>
 
                             </div>
 
@@ -200,20 +200,20 @@
                             <div class="col-md-6">
 
                                 <input class="form-control" type="text" name="phone" [(ngModel)]="contactForm.phone"
-                                    placeholder="Phone Number">
+                                    placeholder="Phone Number" required>
 
                             </div>
 
                             <div class="col-md-6">
 
                                 <input class="form-control" type="text" name="country" [(ngModel)]="contactForm.country"
-                                    placeholder="Country">
+                                    placeholder="Country" required>
 
                             </div>
 
                             <div class="col-md-6">
 
-                                <select class="form-select" name="service" [(ngModel)]="contactForm.service">
+                                <select class="form-select" name="service" [(ngModel)]="contactForm.service" required>
 
                                     <option value="">
 
@@ -238,7 +238,7 @@
                             <div class="col-12">
 
                                 <textarea class="form-control" rows="6" name="message" [(ngModel)]="contactForm.message"
-                                    placeholder="Tell us about your project...">
+                                    placeholder="Tell us about your project..." required>
 
                                 </textarea>
 
@@ -246,7 +246,7 @@
 
                             <div class="col-12">
 
-                                <button class="submit-btn" [disabled]="ctaForm.invalid || isSubmitting" type="submit">
+                                <button class="submit-btn" [class.disabled]="ctaForm.invalid || isSubmitting" [disabled]="ctaForm.invalid || isSubmitting" type="submit">
 
                                     {{ isSubmitting ? 'Sending...' : 'Request Proposal' }}
 
